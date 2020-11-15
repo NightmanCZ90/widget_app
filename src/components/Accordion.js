@@ -12,10 +12,14 @@ const Accordion = ({ items }) => {
           <p>{item.content}</p>
         </div>
       </div>
-    )
+    );
   })
 
-  return <h1>{items.length}</h1>
+  return (
+    <div className="ui styled accordion">
+      {renderedItems}
+    </div>
+  )
 };
 
 export default Accordion;
