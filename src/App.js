@@ -18,7 +18,7 @@ const items = [
   },
 ];
 
-const option = [
+const options = [
   {
     label: 'The Color Magenta',
     value: 'magenta'
