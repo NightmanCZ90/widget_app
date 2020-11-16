@@ -16,6 +16,25 @@ const items = [
     title: 'How do you use React?',
     content: 'You use React by creating components'
   },
+];
+
+const option = [
+  {
+    label: 'The Color Magenta',
+    value: 'magenta'
+  },
+  {
+    label: 'The Color OrangeRed',
+    value: 'orangered'
+  },
+  {
+    label: 'The Color Cyan',
+    value: 'cyan'
+  },
+  {
+    label: 'The Color Lime',
+    value: 'lime'
+  },
 ]
 
 
@@ -24,7 +43,7 @@ export default () => {
     <div>
       {/* <Accordion items={items} /> */}
       {/* <Search /> */}
-      <Dropdown />
+      <Dropdown options={options} />
     </div>
   )
 }
