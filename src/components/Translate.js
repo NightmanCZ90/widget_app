@@ -17,7 +17,7 @@ const options = [
   },
   {
     label: 'Czech',
-    value: 'cz'
+    value: 'cs'
   },
 ]
 
