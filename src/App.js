@@ -36,24 +36,50 @@ const options = [
     label: 'The Color Lime',
     value: 'lime'
   },
-]
+];
 
+const showAccordion = () => {
+  if (window.location.pathname === '/') {
+    return <Accordion items={items} />
+  }
+};
+
+const showSearch = () => {
+  if (window.location.pathname === '/search') {
+    return <Search />
+  }
+};
+
+const showDropdown = () => {
+  // const [selected, setSelected] = useState(options[0]);
+  
+  if (window.location.pathname === '/dropdown') {
+    return (
+      // <Dropdown 
+      //   label="Select a Color"
+      //   options={options} 
+      //   selected={selected} 
+      //   onSelectedChange={setSelected}
+      // />
+      // <h1 style={{color: selected.value}}>This text is {selected.value}.</h1>
+      <Dropdown />
+    )
+  }
+};
+
+const showTranslate = () => {
+  if (window.location.pathname === '/translate') {
+    return <Translate />
+  }
+}
 
 export default () => {
-  const [selected, setSelected] = useState(options[0]);
-
   return (
     <div>
-      {/* <Accordion items={items} /> */}
-      {/* <Search /> */}
-      {/* <Dropdown 
-        label="Select a Color"
-        options={options} 
-        selected={selected} 
-        onSelectedChange={setSelected}
-      /> */}
-      {/* <h1 style={{color: selected.value}}>This text is {selected.value}.</h1> */}
-      <Translate />
+      {showAccordion()}
+      {showSearch()}
+      {showDropdown()}
+      {showTranslate()}
     </div>
   )
 }
