@@ -20,7 +20,7 @@ const Convert = ({ language, text }) => {
     const doTranslation = async () => {
       const { data } = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
         params: {
-          q: text,
+          q: debouncedText,
           target: language.value,
           key: googleTranslateAPI
         }
@@ -30,7 +30,7 @@ const Convert = ({ language, text }) => {
     };
 
     doTranslation();
-  }, [language, text]);
+  }, [language, debouncedText]);
 
   return (
     <div>
